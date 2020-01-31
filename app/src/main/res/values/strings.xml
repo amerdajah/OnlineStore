@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">OnlineStore</string>
+
+    <string-array name="main_category_array">
+        <item>Cars and Bikes</item>
+        <item>Mobile - Tablet</item>
+        <item>Video Games and Consoles</item>
+        <item>Electronics - Appliances</item>
+        <item>Real Estate for Sale</item>
+        <item>Real Estate for Rent</item>
+        <item>Furniture - Decor</item>
+        <item>Women's Fashion</item>
+        <item>Men's Fashion</item>
+        <item>Baby - Kids</item>
+        <item>Pets</item>
+    </string-array>
+</resources>
