@@ -10,6 +10,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
 import com.example.onlinestore.loginregister.LoginActivity
 import com.example.onlinestore.models.Offer
@@ -21,13 +22,13 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.ViewHolder
+import com.xwray.groupie.GroupieViewHolder
 import kotlinx.android.synthetic.main.activity_latest_offers.*
 
 class LatestOffersActivity : AppCompatActivity() {
 
 
-    private val adapter = GroupAdapter<ViewHolder>()
+    private val adapter = GroupAdapter<GroupieViewHolder>()
     lateinit var progressDialog: ProgressDialog
     private var uid: String? = null
 

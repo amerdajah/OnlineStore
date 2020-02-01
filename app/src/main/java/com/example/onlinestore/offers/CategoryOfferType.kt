@@ -3,18 +3,24 @@ package com.example.onlinestore.offers
 import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import com.example.onlinestore.R
+import com.example.onlinestore.views.OfferCategoryRowBody
+import com.example.onlinestore.views.OfferCategoryRowHeader
+import com.xwray.groupie.ExpandableGroup
 import com.xwray.groupie.GroupAdapter
-import com.xwray.groupie.ViewHolder
+import com.xwray.groupie.GroupieViewHolder
+import com.xwray.groupie.Section
 import kotlinx.android.synthetic.main.activity_category_offer_type.*
-import kotlinx.android.synthetic.main.activity_latest_offers.*
+import kotlinx.android.synthetic.main.offer_category_row_body.view.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class CategoryOfferType : AppCompatActivity() {
 
-    private val adapter = GroupAdapter<ViewHolder>()
+    private val adapter = GroupAdapter<GroupieViewHolder>()
     lateinit var progressDialog: ProgressDialog
-    //private lateinit var arrayList: ArrayList<String>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +31,7 @@ class CategoryOfferType : AppCompatActivity() {
         recyclerView_mainCategory.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
         progressDialog = ProgressDialog(this)
         progressDialog.setMessage("please wait...")
+
 
         val myArray = arrayOf("Cars and Bikes", "Mobile - Tablet", "Video Games & Consoles",
             "Electronics - Appliances", "Real Estate for Sale", "Real Estate for Rent", "Furniture - Decor", "Women's Fashion",
@@ -50,5 +57,21 @@ class CategoryOfferType : AppCompatActivity() {
             "Personal Care Devices", "Perfume - Incense for men", "Others = Men's Fashion")
         val babyArray = arrayOf("Kids Furniture", "Strollers - Cars Seats", "Kids Clothing", "Toys-Games", "Other - Baby-kids")
         val petsArray = arrayOf("Cats", "Birds", "Pigeons", "Sheep", "Animal Food", "Accessories", "Other Animal")
+
+        myArray.forEach {
+            ExpandableGroup(OfferCategoryRowHeader(it), true).apply {
+                add(Section(getCategoryChild(petsArray)))
+                adapter.add(this)
+            }
+        }
+        adapter.setOnItemClickListener { item, view ->
+            Toast.makeText(this, view.textView_expandable_body_subtitle.text, Toast.LENGTH_LONG).show()
+        }
+    }
+
+    private fun getCategoryChild(childrenArray: Array<String>): ArrayList<OfferCategoryRowBody>{
+        val arr = ArrayList<OfferCategoryRowBody>()
+        childrenArray.forEach { arr.add(OfferCategoryRowBody((it))) }
+        return  arr
     }
 }

@@ -3,13 +3,14 @@ apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-android-extensions'
 apply plugin: 'com.google.gms.google-services'
 
-androidExtensions {
-    experimental = true
-}
 
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
+
+    androidExtensions {
+        experimental = true
+    }
 
     defaultConfig {
         applicationId "com.example.onlinestore"
@@ -17,6 +18,7 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        vectorDrawables.useSupportLibrary = true
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -40,7 +42,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-storage:19.1.0'
     implementation 'com.google.firebase:firebase-database:19.2.0'
     implementation 'de.hdodenhof:circleimageview:3.0.1'
-    implementation "com.xwray:groupie:2.5.1"
+    implementation "com.xwray:groupie:2.7.0"
+    implementation "com.xwray:groupie-kotlin-android-extensions:2.7.0"
     implementation 'com.squareup.picasso:picasso:2.71828'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'

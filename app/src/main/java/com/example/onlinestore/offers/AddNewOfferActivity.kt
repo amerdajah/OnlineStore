@@ -32,6 +32,10 @@ class AddNewOfferActivity : AppCompatActivity() {
         progressDialog = ProgressDialog(this)
         progressDialog.setMessage("please wait, try to post new offer...")
 
+        imageView_ic_goToCategory.setOnClickListener {
+            startActivity(Intent(this, CategoryOfferType::class.java))
+        }
+
 
 
         button_select_photo_newoffer.setOnClickListener {
