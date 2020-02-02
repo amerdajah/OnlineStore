@@ -11,4 +11,6 @@ class OfferCategoryRowBody(private val childTitle: String): Item() {
     }
 
     override fun getLayout(): Int = R.layout.offer_category_row_body
+
+    override fun getSpanSize(spanCount: Int, position: Int) = spanCount / 3
 }

@@ -1,10 +1,10 @@
+@file:Suppress("DEPRECATION")
+
 package com.example.onlinestore.offers
 
-import android.app.ProgressDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toast
-import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.GridLayoutManager
 import com.example.onlinestore.R
 import com.example.onlinestore.views.OfferCategoryRowBody
 import com.example.onlinestore.views.OfferCategoryRowHeader
@@ -13,65 +13,97 @@ import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Section
 import kotlinx.android.synthetic.main.activity_category_offer_type.*
-import kotlinx.android.synthetic.main.offer_category_row_body.view.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class CategoryOfferType : AppCompatActivity() {
 
-    private val adapter = GroupAdapter<GroupieViewHolder>()
-    lateinit var progressDialog: ProgressDialog
+    private val cashForLoadArrays = ArrayList<OfferCategoryRowBody>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category_offer_type)
 
-        title = "Latest Offers"
-        recyclerView_mainCategory.adapter = adapter
-        recyclerView_mainCategory.addItemDecoration(DividerItemDecoration(this, DividerItemDecoration.VERTICAL))
-        progressDialog = ProgressDialog(this)
-        progressDialog.setMessage("please wait...")
-
-
-        val myArray = arrayOf("Cars and Bikes", "Mobile - Tablet", "Video Games & Consoles",
-            "Electronics - Appliances", "Real Estate for Sale", "Real Estate for Rent", "Furniture - Decor", "Women's Fashion",
-            "Men's Fashion", "Baby - Kids", "Pets")
-        val carsArray = arrayOf("Cars For Sale", "Car Rental", "Motorcycle", "Car Plates Number", "Car Accessories",
-            "Wheel and Rims", "Trucks - Heavy Machinery", "Boat, Yacht, and Jet Ski", "Junk Cars - Other Vehicles")
-        val mobileArray = arrayOf("Mobiles", "Tablet", "VIP Phone Numbers", "Mobile Tablet Accessories",
-            "Mobile - Tablet Spare Parts", "Others - Mobile - Tablet")
-        val videoGamesArray = arrayOf("Consoles", "Video Games", "Accessories - Replacement Parts",
-            "Gaming Cards", "Accounts and Characters", "Action Figures", "Others - Gaming")
-        val electronicsArray = arrayOf("Laptops - Computers", "TVs - Screens", "Speakers - Amplifiers", "Stereo - Radios",
-            "Receivers - DVD Players", "Modems - Routers", "Cameras - Photography", "Air Conditioners - Fans", "Refrigerators - Freezers",
-            "Washers - Dishwashers", "Ovens - Microwaves", "Water Coolers and Filters")
-        val realEstateSaleArray = arrayOf("Apartment for sale", "Villa - Place for sale", "Land for Sale",
-            "Commercial for Sale", "Whole Building for Sale", "Chalets - Summerhouses for Sale", "Foreign Real Estate for Sale")
-        val realEstateRentArray = arrayOf("Apartment for Rent", "Villa - Place for Rent", "Land for Rent",
-            "Commercial for Rent", "Whole Building for Rent", "Chalets - Summerhouses for Rent", "Foreign Real Estate for Rent")
-        val furnitureArray = arrayOf("Furniture", "Home Decor - Furnishings", "Kitchen Tools - Hosting",
-            "Houseware", "Other Furniture - Decor")
-        val womenFashionArray = arrayOf("Clothes", "Women Shoes", "Watches", "Accessories = Jewelry", "Bags",
-            "Perfumes - Incense", "Personal Care Devices", "Beauty Cosmetics", "Personal Health Care", "Others - Women's Fashion")
-        val menFashionArray = arrayOf("Menswear", "Men's Shoes", "Men's Watches", "Men's Accessories",
-            "Personal Care Devices", "Perfume - Incense for men", "Others = Men's Fashion")
-        val babyArray = arrayOf("Kids Furniture", "Strollers - Cars Seats", "Kids Clothing", "Toys-Games", "Other - Baby-kids")
-        val petsArray = arrayOf("Cats", "Birds", "Pigeons", "Sheep", "Animal Food", "Accessories", "Other Animal")
-
-        myArray.forEach {
+        title = "Choose The Type"
+        val mAdapter = GroupAdapter<GroupieViewHolder>().apply {
+            spanCount = 3
+        }
+        recyclerView_mainCategory.apply {
+            layoutManager = GridLayoutManager(this@CategoryOfferType, mAdapter.spanCount).apply {
+                spanSizeLookup = mAdapter.spanSizeLookup
+            }
+            adapter = mAdapter
+        }
+        resources.getStringArray(R.array.main_array).forEach {
             ExpandableGroup(OfferCategoryRowHeader(it), true).apply {
-                add(Section(getCategoryChild(petsArray)))
-                adapter.add(this)
+                add(Section(getHeadersChildren(it)))
+                isExpanded = false
+                mAdapter.add(this)
             }
         }
-        adapter.setOnItemClickListener { item, view ->
-            Toast.makeText(this, view.textView_expandable_body_subtitle.text, Toast.LENGTH_LONG).show()
+        mAdapter.setOnItemClickListener { _, view ->
+            view.setBackgroundColor(resources.getColor(R.color.colorAccent))
         }
     }
 
-    private fun getCategoryChild(childrenArray: Array<String>): ArrayList<OfferCategoryRowBody>{
-        val arr = ArrayList<OfferCategoryRowBody>()
-        childrenArray.forEach { arr.add(OfferCategoryRowBody((it))) }
-        return  arr
+    private fun getHeadersChildren(arrayName: String): ArrayList<OfferCategoryRowBody>{
+        cashForLoadArrays.clear()
+         when (arrayName){
+            "Cars and Bikes"-> {
+                resources.getStringArray(R.array.cars_array).forEach {
+                    cashForLoadArrays.add(OfferCategoryRowBody(it))
+                }
+            }
+             "Mobile-Tablet" -> {
+                 resources.getStringArray(R.array.mobile_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Video Games-Consoles"-> {
+                 resources.getStringArray(R.array.videoGames_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Electronics-Appliances" -> {
+                 resources.getStringArray(R.array.electronics_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Real Estate for Sale" -> {
+                 resources.getStringArray(R.array.realEstateSale_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Real Estate for Rent" -> {
+                 resources.getStringArray(R.array.realEstateRent_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Furniture-Decor" -> {
+                 resources.getStringArray(R.array.furniture_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Women's Fashion" -> {
+                 resources.getStringArray(R.array.womenFashion_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Men's Fashion" -> {
+                 resources.getStringArray(R.array.menFashion_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Baby-Kids" -> {
+                 resources.getStringArray(R.array.baby_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+             "Pets" -> {
+                 resources.getStringArray(R.array.pets_array).forEach {
+                     cashForLoadArrays.add(OfferCategoryRowBody(it))
+                 }
+             }
+        }
+        return cashForLoadArrays
     }
 }

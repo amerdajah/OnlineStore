@@ -11,16 +11,18 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
+        android:layout_marginLeft="15sp"
         android:layout_marginBottom="2dp"
-        android:layout_centerHorizontal="true"
         android:textStyle="bold"
-        android:textColor="?attr/colorAccent"
-        tools:text="Group 1"/>
+        android:textSize="30sp"
+        tools:text="Group 1"
+        android:layout_marginStart="15sp" />
     <ImageView
         android:id="@+id/item_expandable_header_icon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50sp"
+        android:layout_height="50sp"
+        android:layout_marginLeft="20sp"
         app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp"
-        android:tint="@color/colorAccent"
-        android:layout_toRightOf="@id/textView_expandable_header_title" />
+        android:layout_toRightOf="@id/textView_expandable_header_title"
+        android:layout_toEndOf="@id/textView_expandable_header_title" />
 </RelativeLayout>

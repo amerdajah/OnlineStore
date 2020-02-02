@@ -1,4 +1,121 @@
 <resources>
     <string name="app_name">OnlineStore</string>
 
+    <string-array name="main_array">
+        <item>Cars and Bikes</item>
+        <item>Mobile-Tablet</item>
+        <item>Video Games-Consoles</item>
+        <item>Electronics-Appliances</item>
+        <item>Real Estate for Sale</item>
+        <item>Real Estate for Rent</item>
+        <item>Furniture-Decor</item>
+        <item>Women\'s Fashion</item>
+        <item>Men\'s Fashion</item>
+        <item>Baby-Kids</item>
+        <item>Pets</item>
+    </string-array>
+    <string-array name="cars_array">
+        <item>Cars For Sale</item>
+        <item>Car Rental</item>
+        <item>Motorcycle</item>
+        <item>Car Plates Number</item>
+        <item>Car Accessories</item>
+        <item>Wheel and Rims</item>
+        <item>Trucks-Heavy Machinery</item>
+        <item>Boat, Yacht, and Jet Ski</item>
+        <item>Junk Cars-Other Vehicles</item>
+    </string-array>
+    <string-array name="mobile_array">
+        <item>Mobiles</item>
+        <item>Tablet</item>
+        <item>VIP Phone Numbers</item>
+        <item>Mobile Tablet Accessories</item>
+        <item>Mobile-Tablet Spare Parts</item>
+        <item>Others-Mobile-Tablet</item>
+    </string-array>
+    <string-array name="videoGames_array">
+        <item>Consoles</item>
+        <item>Video Games</item>
+        <item>Accessories-Replacement Parts</item>
+        <item>Gaming Cards</item>
+        <item>Accounts and Characters</item>
+        <item>Action Figures</item>
+        <item>Others-Gaming</item>
+    </string-array>
+    <string-array name="electronics_array">
+        <item>Laptops-Computers</item>
+        <item>TVs-Screens</item>
+        <item>Speakers-Amplifiers</item>
+        <item>Stereo-Radios</item>
+        <item>Receivers-DVD Players</item>
+        <item>Modems-Routers</item>
+        <item>Cameras-Photography</item>
+        <item>Air Conditioners-Fans</item>
+        <item>Refrigerators-Freezers</item>
+        <item>Washers-Dishwashers</item>
+        <item>Ovens-Microwaves</item>
+        <item>Water Coolers and Filters</item>
+    </string-array>
+    <string-array name="realEstateSale_array">
+        <item>Apartment for sale</item>
+        <item>Villa-Place for sale</item>
+        <item>Land for Sale</item>
+        <item>Commercial for Sale</item>
+        <item>Whole Building for Sale</item>
+        <item>Chalets-Summerhouses for Sale</item>
+        <item>Foreign Real Estate for Sale</item>
+    </string-array>
+    <string-array name="realEstateRent_array">
+        <item>Apartment for Rent</item>
+        <item>Villa-Place for Rent</item>
+        <item>Land for Rent</item>
+        <item>Commercial for Rent</item>
+        <item>Whole Building for Rent</item>
+        <item>Chalets-Summerhouses for Rent</item>
+        <item>Foreign Real Estate for Rent</item>
+    </string-array>
+    <string-array name="furniture_array">
+        <item>Furniture</item>
+        <item>Home Decor-Furnishings</item>
+        <item>Kitchen Tools-Hosting</item>
+        <item>HouseWare</item>
+        <item>Other Furniture-Decor</item>
+    </string-array>
+    <string-array name="womenFashion_array">
+        <item>Clothes</item>
+        <item>Women\s Shoes</item>
+        <item>Watches</item>
+        <item>Accessories-Jewelry</item>
+        <item>Bags</item>
+        <item>Perfumes-Incense</item>
+        <item>Personal Care Devices</item>
+        <item>Beauty Cosmetics</item>
+        <item>Others-Women\'s Fashion</item>
+    </string-array>
+    <string-array name="menFashion_array">
+        <item>Menswear</item>
+        <item>aMen\'s Shoes</item>
+        <item>Men\'s Watches</item>
+        <item>Men\'s Accessories</item>
+        <item>Personal Care Devices</item>
+        <item>Perfume-Incense for men</item>
+        <item>Others-Men\'s Fashion</item>
+    </string-array>
+    <string-array name="baby_array">
+        <item>Kids Furniture</item>
+        <item>Strollers-Cars Seats</item>
+        <item>Kids Clothing</item>
+        <item>Toys-Games</item>
+        <item>Other-Baby-kids</item>
+    </string-array>
+    <string-array name="pets_array">
+        <item>Cats</item>
+        <item>Birds</item>
+        <item>Pigeons</item>
+        <item>Sheep</item>
+        <item>Animal Food</item>
+        <item>Accessories</item>
+        <item>Other Animal</item>
+    </string-array>
+
 </resources>
