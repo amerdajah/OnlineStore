@@ -20,8 +20,6 @@ class LoginActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
 
-        val b= "sd"
-
         progressDialog = ProgressDialog(this)
         progressDialog.setMessage("please wait, try to login...")
 
