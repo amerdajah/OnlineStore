@@ -1,14 +1,15 @@
 package com.example.onlinestore.views
 
-import androidx.recyclerview.widget.RecyclerView
+import android.content.Context
+import com.bumptech.glide.Glide
 import com.example.onlinestore.R
 import com.example.onlinestore.models.Offer
-import com.squareup.picasso.Picasso
+import com.example.onlinestore.models.User
 import com.xwray.groupie.GroupieViewHolder
 import com.xwray.groupie.Item
 import kotlinx.android.synthetic.main.offer_row.view.*
 
-class OfferItemRow(private val offer: Offer): Item<GroupieViewHolder>() {
+class OfferItemRow(private val context: Context, private val offer: Offer, private val seller: User): Item<GroupieViewHolder>() {
 
     val offerItem = offer
 
@@ -21,5 +22,13 @@ class OfferItemRow(private val offer: Offer): Item<GroupieViewHolder>() {
         viewHolder.itemView.textView_description_offer_row.text = offer.description
         viewHolder.itemView.textView_time_offer_row.text = offer.timeSnap
         viewHolder.itemView.textView_price_offerRow.text = offer.price
-        Picasso.get().load(offer.offerImage).into(viewHolder.itemView.imageView_circle_offer_row)    }
+        Glide
+            .with(context)
+            .load(offer.offerImage)
+            .into(viewHolder.itemView.imageView_circle_offer_row)
+        Glide
+            .with(context)
+            .load(seller.profileImageUri)
+            .into(viewHolder.itemView.imageView_sellerPic_offer_row)
+    }
 }

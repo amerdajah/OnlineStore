@@ -19,6 +19,7 @@
             android:layout_height="140dp"
             android:layout_marginLeft="10sp"
             android:layout_marginTop="50dp"
+            android:scaleType="fitCenter"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.059"
             app:layout_constraintStart_toStartOf="parent"
@@ -80,19 +81,29 @@
                 app:layout_constraintBottom_toBottomOf="@+id/imageView_circle_offer_row"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.325"
-                app:layout_constraintStart_toEndOf="@+id/imageView_circle_offer_row" />
+                app:layout_constraintStart_toEndOf="@+id/imageView_circle_offer_row"
+                android:layout_marginStart="10dp" />
 
-            <TextView
-                android:id="@+id/textView_time_offer_row"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="135dp"
-                android:layout_marginTop="20dp"
-                android:text="TextView"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView_description_offer_row"
-                app:layout_constraintVertical_bias="0.875" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/imageView_sellerPic_offer_row"
+                    android:layout_width="40sp"
+                    android:layout_height="40sp" />
+
+                <TextView
+                    android:id="@+id/textView_time_offer_row"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15sp"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:text="TextView" />
+            </LinearLayout>
 
         </LinearLayout>
 

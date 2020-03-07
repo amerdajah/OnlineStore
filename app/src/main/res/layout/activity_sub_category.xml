@@ -1,50 +1,49 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".offers.CategoryOfferType">
+    tools:context=".offers.SubCategory">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="15"
-        android:background="#FFFFFF"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/imageView_cancle_addOffer_LatestOffers"
             android:layout_width="15sp"
             android:layout_height="30sp"
             android:layout_gravity="center_vertical"
-            android:layout_weight=".25"
+            android:layout_weight=".15"
             app:srcCompat="@drawable/ic_keyboard_arrow_left_black_24dp" />
 
         <TextView
+            android:id="@+id/textView_subCategory_title"
             style="@style/Widget.MaterialComponents.MaterialCalendar.HeaderSelection.Fullscreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
             android:layout_marginStart="20sp"
             android:layout_weight="1"
-            android:text="Select Category"
             android:textColor="#000000"
             android:textSize="30sp"
             android:textStyle="bold"
             app:autoSizeMaxTextSize="40sp" />
 
-        <ImageView
-            android:layout_width="15sp"
-            android:layout_height="30sp"
-            android:layout_gravity="fill_horizontal|center_vertical|end"
-            android:layout_weight=".25"
-            app:srcCompat="@drawable/ic_close_black_24dp" />
     </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView_mainCategory"
+        android:id="@+id/recyclerView_sucCategory"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1" />
+        android:layoutAnimation="@anim/layout_animation"/>
 </LinearLayout>

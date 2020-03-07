@@ -57,22 +57,22 @@
         <item>Water Coolers and Filters</item>
     </string-array>
     <string-array name="realEstateSale_array">
-        <item>Apartment for sale</item>
-        <item>Villa-Place for sale</item>
-        <item>Land for Sale</item>
-        <item>Commercial for Sale</item>
-        <item>Whole Building for Sale</item>
-        <item>Chalets-Summerhouses for Sale</item>
-        <item>Foreign Real Estate for Sale</item>
+        <item>Apartment</item>
+        <item>Villa-Place</item>
+        <item>Land</item>
+        <item>Commercial</item>
+        <item>Whole Building</item>
+        <item>Chalets-Summerhouses</item>
+        <item>Foreign Real Estate</item>
     </string-array>
     <string-array name="realEstateRent_array">
-        <item>Apartment for Rent</item>
-        <item>Villa-Place for Rent</item>
-        <item>Land for Rent</item>
-        <item>Commercial for Rent</item>
-        <item>Whole Building for Rent</item>
-        <item>Chalets-Summerhouses for Rent</item>
-        <item>Foreign Real Estate for Rent</item>
+        <item>Apartment</item>
+        <item>Villa-Place</item>
+        <item>Land</item>
+        <item>Commercial</item>
+        <item>Whole Building</item>
+        <item>Chalets-Summerhouses</item>
+        <item>Foreign Real Estate</item>
     </string-array>
     <string-array name="furniture_array">
         <item>Furniture</item>
@@ -117,5 +117,465 @@
         <item>Accessories</item>
         <item>Other Animal</item>
     </string-array>
+
+    <string-array name="carType">
+        <item>Hyundai</item>
+        <item>Toyota</item>
+        <item>Kia</item>
+        <item>BMW</item>
+        <item>Mercedes Benz</item>
+        <item>Aston Martin</item>
+        <item>Audi</item>
+        <item>Isuzu</item>
+        <item>Opel</item>
+        <item>Porsche</item>
+        <item>Peugeot</item>
+        <item>Jaguar</item>
+        <item>Jeep</item>
+        <item>GMC</item>
+        <item>Dodge</item>
+        <item>Skoda</item>
+        <item>Ford</item>
+        <item>Lada</item>
+        <item>Lexus</item>
+        <item>Lotus</item>
+        <item>Lincoln</item>
+        <item>Mazda</item>
+        <item>MINI</item>
+        <item>Nissan</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="yearMade">
+        <item>2020</item>
+        <item>2019</item>
+        <item>2018</item>
+        <item>2017</item>
+        <item>2016</item>
+        <item>2015</item>
+        <item>2014</item>
+        <item>2013</item>
+        <item>2012</item>
+        <item>2011</item>
+        <item>2010</item>
+        <item>2009</item>
+        <item>2008</item>
+        <item>2007</item>
+        <item>2006</item>
+        <item>2005</item>
+        <item>2004</item>
+        <item>2003</item>
+        <item>2002</item>
+        <item>2001</item>
+        <item>2000</item>
+    </string-array>
+
+    <string-array name="mobileMade">
+        <item>Apple</item>
+        <item>Samsung</item>
+        <item>Sony</item>
+        <item>Microsoft</item>
+        <item>Acer</item>
+        <item>Lenovo</item>
+        <item>Asus</item>
+        <item>Dell</item>
+        <item>HP</item>
+        <item>Toshiba</item>
+        <item>HTC</item>
+        <item>LG</item>
+        <item>Alcatel</item>
+        <item>ASUS</item>
+        <item>Nokia</item>
+        <item>Xiaomi</item>
+        <item>Oppo</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="usedOrNew">
+        <item>New</item>
+        <item>Used</item>
+    </string-array>
+
+    <string-array name="motorcycleMade">
+        <item>BMW</item>
+        <item>Buggy</item>
+        <item>Can-Am</item>
+        <item>Ducati</item>
+        <item>Harley Davidson</item>
+        <item>Honda</item>
+        <item>Kawasaki</item>
+        <item>KTM</item>
+        <item>Suzuki</item>
+        <item>Yamaha</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carMiles">
+        <item>1 /- 49,999</item>
+        <item>50,000 /- 99,999</item>
+        <item>100,000 /- 145,999</item>
+        <item>150,000 /- 199,999</item>
+        <item>+200,000</item>
+    </string-array>
+
+    <string-array name="motorcycleEngine">
+        <item>Less than 250 CC</item>
+        <item>250 /- 499 CC</item>
+        <item>500 /- 599 CC</item>
+        <item>600 /- 749 CC</item>
+        <item>750 /- 999 CC</item>
+        <item>+1000</item>
+    </string-array>
+
+    <string-array name="powerEngineType">
+        <item>Gasoline</item>
+        <item>Diesel</item>
+        <item>Hybrid</item>
+        <item>Electric</item>
+    </string-array>
+
+    <string-array name="rentTime">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Yearly</item>
+    </string-array>
+
+    <string-array name="automaticOrManual">
+        <item>Automatic</item>
+        <item>Manual</item>
+    </string-array>
+
+    <string-array name="boatsType">
+        <item>Motorboats</item>
+        <item>Jet-ski</item>
+        <item>Row/Paddle Boats</item>
+        <item>Sailboats</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="boatsSaleSteps">
+        <item>Type</item>
+        <item>Condition</item>
+    </string-array>
+
+    <string-array name="wheelSizeSteps">
+        <item>Wheel Size</item>
+    </string-array>
+
+    <string-array name="heavyTrucks">
+        <item>Bulldozer</item>
+        <item>Bus</item>
+        <item>Truck</item>
+        <item>Van</item>
+        <item>Tractor</item>
+        <item>Crane</item>
+        <item>Trailers</item>
+        <item>Forklifts</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="landType">
+        <item>Residential</item>
+        <item>Commercial</item>
+        <item>Farm</item>
+        <item>Mixed Use</item>
+        <item>Industrial</item>
+        <item>Others</item>
+    </string-array>
+
+    <string-array name="carTypeHyundai">
+        <item>H-1 Starex</item>
+        <item>i10</item>
+        <item>i20</item>
+        <item>Atos</item>
+        <item>Azera</item>
+        <item>Accent</item>
+        <item>H100</item>
+        <item>Excel</item>
+        <item>Elentra</item>
+        <item>Avante</item>
+        <item>Sonata</item>
+        <item>Trajet</item>
+        <item>Scoupe</item>
+        <item>Santa Fe</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeToyota">
+        <item>4Runner</item>
+        <item>IQ</item>
+        <item>MR2</item>
+        <item>Avanza</item>
+        <item>Akkex</item>
+        <item>Opa</item>
+        <item>Prado</item>
+        <item>Probox</item>
+        <item>Prius</item>
+        <item>Prius C</item>
+        <item>Porte</item>
+        <item>BB</item>
+        <item>Voxy</item>
+        <item>Cavalier</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeKia">
+        <item>Avila</item>
+        <item>Optima</item>
+        <item>Elan</item>
+        <item>Pride</item>
+        <item>Besta</item>
+        <item>Picanto</item>
+        <item>Rio</item>
+        <item>Sportage</item>
+        <item>Spectra</item>
+        <item>Forte</item>
+        <item>Venga</item>
+        <item>Sephia</item>
+        <item>Shuma</item>
+        <item>Soul</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeBMW">
+        <item>M1</item>
+        <item>M2</item>
+        <item>M3</item>
+        <item>M4</item>
+        <item>M5</item>
+        <item>M6</item>
+        <item>X1</item>
+        <item>X2</item>
+        <item>X3</item>
+        <item>X4</item>
+        <item>X5</item>
+        <item>X6</item>
+        <item>Z1</item>
+        <item>Z3</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeMercedesBenz">
+        <item>AMG GT</item>
+        <item>Sprinter</item>
+        <item>Smart</item>
+        <item>Vito</item>
+        <item>EQC</item>
+        <item>190</item>
+        <item>200</item>
+        <item>230</item>
+        <item>250</item>
+        <item>280</item>
+        <item>300</item>
+        <item>320</item>
+        <item>380</item>
+        <item>450</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeAstonMartin">
+        <item>DB7</item>
+        <item>DB9</item>
+        <item>SBC</item>
+        <item>Rapid</item>
+        <item>Cygnet</item>
+        <item>Virage</item>
+        <item>Lagonda</item>
+        <item>V8</item>
+        <item>V12</item>
+        <item>One /-77</item>
+        <item>V12 Vantage</item>
+        <item>V8 Vantage</item>
+        <item>DB6</item>
+        <item>DBS</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeAudi">
+        <item>50</item>
+        <item>60</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+        <item>200</item>
+        <item>TT</item>
+        <item>V8</item>
+        <item>Cabriolet</item>
+        <item>Quattro</item>
+        <item>Coupe</item>
+        <item>e-tron</item>
+        <item>TT RS</item>
+        <item>TTS</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeIsuzu">
+        <item>FSR</item>
+        <item>NKR</item>
+        <item>NPR</item>
+        <item>I-Mark</item>
+        <item>Aska</item>
+        <item>Amigo</item>
+        <item>Piazza</item>
+        <item>Bighorn</item>
+        <item>Trooper</item>
+        <item>Giga</item>
+        <item>D-Max</item>
+        <item>Rodio</item>
+        <item>Faster</item>
+        <item>Filly</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeOpel">
+        <item>Agila</item>
+        <item>Astra</item>
+        <item>Ascona</item>
+        <item>Admiral</item>
+        <item>Omega</item>
+        <item>Antara</item>
+        <item>Zafira</item>
+        <item>Speedster</item>
+        <item>Signum</item>
+        <item>Senator</item>
+        <item>Sintra</item>
+        <item>Vita</item>
+        <item>Vectra</item>
+        <item>Manta</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypePorsche">
+        <item>911</item>
+        <item>924</item>
+        <item>928</item>
+        <item>944</item>
+        <item>959</item>
+        <item>968</item>
+        <item>911 4</item>
+        <item>911 4S</item>
+        <item>911 GT2</item>
+        <item>911 GT2</item>
+        <item>911S</item>
+        <item>911 Targa</item>
+        <item>911 Targa 4</item>
+        <item>911 Turbo</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypePeugeot">
+        <item>1XX</item>
+        <item>2XX</item>
+        <item>3XX</item>
+        <item>4XX</item>
+        <item>5XX</item>
+        <item>6XX</item>
+        <item>8XX</item>
+        <item>RC</item>
+        <item>1007</item>
+        <item>2008</item>
+        <item>Partner</item>
+        <item>Boxer</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeJaguar">
+        <item>E-Pace</item>
+        <item>E-Type</item>
+        <item>F-Pace</item>
+        <item>F-Type</item>
+        <item>S-Type</item>
+        <item>X-Type</item>
+        <item>XE</item>
+        <item>XF</item>
+        <item>XFR</item>
+        <item>XJ</item>
+        <item>XJ 220</item>
+        <item>XK</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeJeep">
+        <item>Patriot</item>
+        <item>Grand Chetokee</item>
+        <item>Wrangler</item>
+        <item>Renegade</item>
+        <item>Commander</item>
+        <item>Comanche</item>
+        <item>Laredo</item>
+        <item>Loberty</item>
+        <item>Wagoneer</item>
+        <item>Gladiator</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carTypeGMC">
+        <item>Acadia</item>
+        <item>Envoy</item>
+        <item>Typhoon</item>
+        <item>Jimmy</item>
+        <item>Safari</item>
+        <item>Sierra</item>
+        <item>Vandura</item>
+        <item>Caprice</item>
+        <item>Galais</item>
+        <item>Canyon</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="carSaleSteps">
+        <item>Car Made</item>
+        <item>Model</item>
+        <item>Year</item>
+        <item>Condition</item>
+        <item>Kilometers</item>
+        <item>Transmission</item>
+        <item>Fuel</item>
+        <item>Payment Method</item>
+    </string-array>
+
+    <string-array name="carRentSteps">
+        <item>Car Made</item>
+        <item>Model</item>
+        <item>Year</item>
+        <item>Transmission</item>
+        <item>Fuel</item>
+        <item>Rental period</item>
+    </string-array>
+    
+    <string-array name="motorcycleSteps">
+        <item>Make</item>
+        <item>Year</item>
+        <item>Condition</item>
+        <item>Kilometers</item>
+        <item>Engine CC</item>
+        <item>Payment Method</item>
+    </string-array>
+    
+    <string-array name="wheelSize">
+        <item>13 Inch</item>
+        <item>14 Inch</item>
+        <item>15 Inch</item>
+        <item>16 Inch</item>
+        <item>17 Inch</item>
+        <item>18 Inch</item>
+        <item>19 Inch</item>
+        <item>20 Inch</item>
+        <item>21 Inch</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="trucksSaleSteps">
+        <item>Type</item>
+        <item>Condition</item>
+    </string-array>
+
+    <string-array name="paymentMethod">
+        <item>Cash Only</item>
+        <item>Installment Only</item>
+    </string-array>
+
+
 
 </resources>

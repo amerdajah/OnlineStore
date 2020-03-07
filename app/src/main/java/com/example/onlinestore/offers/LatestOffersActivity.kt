@@ -10,7 +10,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import androidx.recyclerview.widget.DividerItemDecoration
-import androidx.recyclerview.widget.RecyclerView
 import com.example.onlinestore.R
 import com.example.onlinestore.loginregister.LoginActivity
 import com.example.onlinestore.models.Offer
@@ -50,23 +49,10 @@ class LatestOffersActivity : AppCompatActivity() {
             goToViewTheOffer(item.offerItem.seller, offerItemRow, this)
 
         }
-    }
 
-    private fun goToViewTheOffer(sellerId: String, offerItemRow: OfferItemRow, context: Context){
-        val ref = FirebaseDatabase.getInstance().getReference("/users/$sellerId")
-        ref.addListenerForSingleValueEvent(object: ValueEventListener {
-            override fun onDataChange(p0: DataSnapshot) {
-                val user = p0.getValue(User::class.java)?: return
-                val intent = Intent(context, ViewOfferActivity::class.java)
-                intent.putExtra("offerItem", offerItemRow.offerItem)
-                intent.putExtra("sellerUser", user)
-                progressDialog.dismiss()
-                startActivity(intent)
-            }
-            override fun onCancelled(p0: DatabaseError) {
-            }
-        })
-
+        floatingActionButton.setOnClickListener {
+            startActivity(Intent(this, AddNewOfferActivity::class.java))
+        }
     }
 
     private fun verifyUserIsLoggedIn() {
@@ -92,13 +78,38 @@ class LatestOffersActivity : AppCompatActivity() {
         ref.child(uid+"").child("status").setValue("Offline")
     }
 
+    private fun goToViewTheOffer(sellerId: String, offerItemRow: OfferItemRow, context: Context){
+        val ref = FirebaseDatabase.getInstance().getReference("/users/$sellerId")
+        ref.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onDataChange(p0: DataSnapshot) {
+                val user = p0.getValue(User::class.java)?: return
+                val intent = Intent(context, ViewOfferActivity::class.java)
+                intent.putExtra("offerItem", offerItemRow.offerItem)
+                intent.putExtra("sellerUser", user)
+                progressDialog.dismiss()
+                startActivity(intent)
+            }
+            override fun onCancelled(p0: DatabaseError) {
+            }
+        })
+
+    }
+
     private fun fetchOffers() {
-        val ref = FirebaseDatabase.getInstance().getReference("/offers")
+        val ref = FirebaseDatabase.getInstance().getReference("/offers").limitToFirst(4)
         ref.addListenerForSingleValueEvent(object: ValueEventListener {
             override fun onDataChange(p0: DataSnapshot) {
                 p0.children.forEach {
                     val offer: Offer = it.getValue(Offer::class.java)!!
-                    adapter.add(OfferItemRow(offer))
+                    FirebaseDatabase.getInstance().getReference("/users/${offer.seller}")
+                        .addListenerForSingleValueEvent(object: ValueEventListener {
+                            override fun onDataChange(p0: DataSnapshot) {
+                                val user = p0.getValue(User::class.java)?: return
+                                adapter.add(OfferItemRow(this@LatestOffersActivity, offer, user))
+                            }
+
+                            override fun onCancelled(p0: DatabaseError){}
+                        })
                 }
                 progressDialog.dismiss()
             }
